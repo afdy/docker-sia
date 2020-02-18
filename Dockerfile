@@ -1,14 +1,14 @@
 FROM debian
 
-ARG VERSION=1.4.2.1
+ARG VERSION=1.4.3
 
 RUN apt-get update && \
     apt-get install -y wget unzip && \
     mkdir -p /sia && \
-    wget -O /tmp/sia.zip https://sia.tech/static/releases/Sia-v1.4.2.1-linux-amd64.zip && \
+    wget -O /tmp/sia.zip https://sia.tech/static/releases/Sia-v1.4.3-linux-amd64.zip && \
     unzip -d /tmp/sia/ /tmp/sia.zip && \
-    mv /tmp/sia/Sia-v1.4.2.1-linux-amd64/siac /usr/local/bin/ && \
-    mv /tmp/sia/Sia-v1.4.2.1-linux-amd64/siad /usr/local/bin/ && \
+    mv /tmp/sia/Sia-v1.4.3-linux-amd64/siac /usr/local/bin/ && \
+    mv /tmp/sia/Sia-v1.4.3-linux-amd64/siad /usr/local/bin/ && \
     rm -rf /tmp/sia/ /tmp/sia.zip /var/lib/apt/lists
 
 WORKDIR /sia
