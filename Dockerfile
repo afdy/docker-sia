@@ -12,6 +12,7 @@ RUN apt-get update && \
     rm -rf /tmp/sia/ /tmp/sia.zip /var/lib/apt/lists
 
 WORKDIR /sia
-EXPOSE 9981 9982
+EXPOSE 9981 9982 9983 9984
 
-CMD ["/usr/local/bin/siad"]
+# bind api port to all interfaces in case we want to use it, we don't expose it by default.
+CMD ["/usr/local/bin/siad","--api-addr=0.0.0.0:9980"]
