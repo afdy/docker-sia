@@ -15,4 +15,4 @@ WORKDIR /sia
 EXPOSE 9981 9982 9983 9984
 
 # bind api port to all interfaces in case we want to use it, we don't expose it by default.
-CMD ["/usr/local/bin/siad","--api-addr=0.0.0.0:9980"]
+CMD ["/usr/local/bin/siad","--api-addr=0.0.0.0:9980","--disable-api-security"]
