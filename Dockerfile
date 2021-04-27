@@ -1,6 +1,6 @@
 FROM debian
 
-ENV VERSION 1.5.5
+ENV VERSION 1.5.6
 
 RUN apt-get update && \
     apt-get install -y wget unzip && \
